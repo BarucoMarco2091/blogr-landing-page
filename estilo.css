@@ -81,6 +81,14 @@ body header nav .auth-buttons a .signup:hover {
   color: hsl(0, 0%, 100%);
 }
 
+body header nav #mobile-btn {
+  display: none;
+}
+
+body header .mobile-nav-links {
+  display: none;
+}
+
 body header .header-content {
   text-align: center;
   margin-top: 5rem;
@@ -287,4 +295,36 @@ footer {
 
 .footer-container .footer-links .footer-section ul li a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width:480px) {
+  body header nav .nav-links {
+    display: none;
+  }
+
+  body header nav #mobile-btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  body header .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0px;
+    align-items: center;
+  }
+
+  body header .mobile-nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+body header .mobile-nav-links #mobile-nav-list {
+  list-style-type: none;
+  text-align: center;
 }
