@@ -24,23 +24,33 @@ body {
 
                 li {
                     position: relative;
-                }
 
-                a {
-                    color: white;
-                    text-decoration: none;
-                }
+                    // Quando o mouse passa sobre o item do menu pai, o dropdown aparece
+                    &:hover .dropdown {
+                        display: block;
+                    }
 
-                .dropdown {
-                    display: none;
-                    position: absolute;
-                    background-color: $white;
-                    color: black;
-                    top: 100%;
-                    left: 0;
-                    list-style: none;
-                    padding: 1rem;
-                    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+
+                    .dropdown {
+                        display: none;
+                        position: absolute;
+                        background-color: $white;
+                        color: black;
+                        top: 100%;
+                        left: 0;
+                        list-style: none;
+                        padding: 1rem;
+                        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+                    }
+
+                    li a {
+                        color: black;
+                        padding: 0.5rem 0;
+                    }
                 }
             }
 
